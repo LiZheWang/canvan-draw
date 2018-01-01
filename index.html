@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>涂鸦</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./weiui/weui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+	<script src="./js/jquery.min.js" type="text/javascript" ></script>
+	<script src="./weiui/weui.min.js" type="text/javascript" ></script>
+	<script src="./js/my/fastclick.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/pulgins/jscolor.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/my/fastclick.js" type="text/javascript" ></script>
+	<script src="./js/my/common.js" type="text/javascript" ></script>
+	<script src="./js/pulgins/draw_plugin.js" type="text/javascript" ></script>
+	<script src="./js/my/demo.js" type="text/javascript" ></script>
+	<script src="./js/my/draw.js" type="text/javascript" ></script>
+</head>
+<body class="">
+		
+		<!--设置画笔宽度  默认4宽度-->
+		<input type="hidden" id="width" value="5" />
+		<!--设置背景图片   -->
+		<!--
+		<input type="hidden" id="Bgimg" value="images/1.jpg" />
+		-->
+		<!--是否启用滚动条-->
+		<input type="hidden" id="scroll"  value="true" />
+		<!--设置背景图的位置      参数：x,y,width,height -->
+		<input type="hidden" id="imgPosition" value="0,0,200,200" />
+		<!--设置背景色-->
+		<input type="hidden" id="Bg" value="#000000" />	
+		<div class="world fullWorld">
+			<div class="canvasBox">
+				<div class="eraser"></div>
+				<div class="xScroll my_scroll"><div class='scrollCon'></div></div>
+				<canvas class="canvas" id="canvas"  ></canvas>
+			</div>
+		    
+		    <div class="toolButtons">
+		    	<a href="javascript:;" type="h" id="changeWindow">竖屏</a>
+		    	<a href="javascript:;" id="editBtn">编辑</a>
+		    </div>
+		    
+		    		    
+		    <div class="canvasBottomBox" id="canvasBottomBox">
+		    	
+		    	<div class="con">
+		    		<div class="tools">
+		    		<div class="row frt">
+		            	<span class="fl" id="selectColor">
+			    			选择颜色：<input readonly class="jscolor" value="00FF00">
+			    		</span>
+		           		<a href="javascript:;" id="clearBtn" class="weui-btn weui-btn_mini weui-btn_warn fr">清空画板</a>
+		            	<a href="javascript:;" id="eraserBtn" class="weui-btn weui-btn_mini weui-btn_primary fr">橡皮擦</a>
+			        </div>
+			        <div class="row" style="margin-top: 13px;">
+			        	<span class="fl">画笔大小：</span>
+			        	<div class="fl setSizeBox">
+				        	<a href="javascript:;" val="8" class="weui-btn weui-btn_mini weui-btn_default setSize">大</a>
+				        	<a href="javascript:;" val="5" class="weui-btn weui-btn_mini weui-btn_primary setSize">中</a>
+				        	<a href="javascript:;" val="3" class="weui-btn weui-btn_mini weui-btn_default setSize">小</a>
+			        	</div>
+			        </div>
+		    		
+		    	</div>
+		    	<div class="weui-btn-area">
+		            <a class="weui-btn weui-btn_primary" href="javascript:" id="makeBtn">预览绘画图片</a>
+		        </div>
+		        
+		        <div id="showImage"></div>
+		        
+		    	</div>
+		        
+		    </div>
+		    
+	        
+		</div>
+	
+
+
+
+
+</body>
+</html>
